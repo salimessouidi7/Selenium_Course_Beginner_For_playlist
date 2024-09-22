@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thread.sleep Test</title>
+    <style>
+        /* Center the content in the middle of the page */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        #delayedButton {
+            display: none;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #message {
+            margin-top: 20px;
+            color: #4CAF50;
+        }
+    </style>
+    <script>
+        // Function to show the button after 3 seconds
+        function showButtonAfterDelay() {
+            setTimeout(function() {
+                document.getElementById('delayedButton').style.display = 'inline-block';
+            }, 3000); // 3000 milliseconds = 3 seconds
+        }
+
+        // Function to display a message when the button is clicked
+        function showMessage() {
+            document.getElementById('message').innerText = 'The button is clicked!';
+        }
+
+        // Call the function when the page loads
+        window.onload = showButtonAfterDelay;
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Testing Thread.sleep</h1>
+        <button id="delayedButton" onclick="showMessage()">Click Me!</button>
+        <div id="message"></div>
+    </div>
+</body>
+</html>
